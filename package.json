@@ -1,0 +1,14 @@
+{
+  "name": "Tic-Tac-Toe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+  "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
+},
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16",
+    "tailwindcss": "3"
+  }
+}
