@@ -10,6 +10,20 @@ let changeTurn = () => {
     return userTurn === "X" ? "O" : "X";
 }
 
+let renderMark = (player) => {
+    if (player === "X") {
+        return `
+          <div class="relative w-10 h-10">
+            <div class="absolute top-1/2 left-1/2 w-full h-1 bg-player-x rounded-full -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+            <div class="absolute top-1/2 left-1/2 w-full h-1 bg-player-x rounded-full -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
+          </div>`;
+    }
+    if (player === "O") {
+        return `<div class="w-10 h-10 rounded-full border-4 border-player-o"></div>`;
+    }
+    return "";
+};
+
 let checkWin = () => {
     let boxText = document.getElementsByClassName("box-text");
     let wins = [
@@ -24,7 +38,7 @@ let checkWin = () => {
     ]
 
     wins.forEach(index => {
-        if ((boxText[index[0]].innerText === boxText[index[1]].innerText) && (boxText[index[1]].innerText === boxText[index[2]].innerText) && (boxText[index[0]].innerText !== 0)) {
+        if ((boxText[index[0]].innerText === boxText[index[1]].innerText) && (boxText[index[1]].innerText === boxText[index[2]].innerText) && (boxText[index[0]].innerText !== "")) {
             turnInfo.innerText = `Player ${boxText[index[0]].innerText} Won!`
             isGameOver = true;
         }
@@ -39,6 +53,7 @@ Array.from(boxes).forEach(element => {
         if (boxText.innerText === "") {
             boxText.innerText = userTurn;
             userTurn = changeTurn();
+
             // turnTune.play();
             checkWin();
             if (!isGameOver) {
@@ -50,10 +65,15 @@ Array.from(boxes).forEach(element => {
 });
 
 
-resetBtn.addEventListener("click" , ()=> {
+resetBtn.addEventListener("click", () => {
 
-let boxtexts = document.querySelectorAll(".box-text");
+    let boxtexts = document.querySelectorAll(".box-text");
 
-Array.from
+    Array.from(boxtexts).forEach(element => {
+        element.innerText = "";
+    });
+    userTurn = "X";
+    isGameOver = false;
+    turnInfo.innerText = `Player ${userTurn} turn`
 
 })

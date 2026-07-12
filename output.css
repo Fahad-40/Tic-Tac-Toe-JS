@@ -586,10 +586,6 @@ video {
   top: 50%;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -600,6 +596,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
@@ -778,11 +778,6 @@ video {
   padding-right: 0.75rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -791,6 +786,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-\[\#F1F5F9\] {
