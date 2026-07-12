@@ -15,3 +15,36 @@
     border:0.5px solid #334155;
     border-radius: 8px;
 }
+
+.win-cell {
+  background-color: transparent !important;
+  border-color: #FACC15 !important;
+  border-width: 2px !important;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink-text {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+    /* @keyframes tieFlash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+    }
+
+    .tie-flash {
+    animation: tieFlash 0.9s ease-in-out 2;
+    } */
+
+@keyframes tieFlash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; } /* 0.9 ko badal kar 0.1 kar diya hai taake sahi se flash ho */
+}
+
+.tie-flash {
+  animation: tieFlash 0.3s ease-in-out 3; /* Thora fast (0.3s) aur 3 bar chalega */
+}
