@@ -81,12 +81,12 @@ let checkTie = () => {
     let allfilled = Array.from(boxTexts).every(box => box.getAttribute("data-player") !== null)
 
     if (allfilled && !isGameOver) {
-          turnInfo.innerText = "It's a Tie!";
+        turnInfo.innerText = "It's a Tie!";
         isGameOver = true;
-        turnInfo.classList.add("blink-text");  
+        turnInfo.classList.add("blink-text");
         // document.querySelector(".board").classList.add("shake-board");
         // document.querySelector(".board").classList.add("shake-board");
-          document.querySelector(".board").classList.add("shake-board", "tie-flash");
+        document.querySelector(".board").classList.add("shake-board", "tie-flash");
     }
 }
 
@@ -128,6 +128,6 @@ resetBtn.addEventListener("click", () => {
     isGameOver = false;
     turnInfo.classList.remove("blink-text")
     turnInfo.innerText = `Player ${userTurn} turn`
-document.querySelector(".board").classList.remove("shake-board", "tie-flash");
+    document.querySelector(".board").classList.remove("shake-board", "tie-flash");
     // void board.offsetWidth; 
 })
