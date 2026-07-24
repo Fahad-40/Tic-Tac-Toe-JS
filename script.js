@@ -84,8 +84,6 @@ let checkTie = () => {
         turnInfo.innerText = "It's a Tie!";
         isGameOver = true;
         turnInfo.classList.add("blink-text");
-        // document.querySelector(".board").classList.add("shake-board");
-        // document.querySelector(".board").classList.add("shake-board");
         document.querySelector(".board").classList.add("shake-board", "tie-flash");
     }
 }
